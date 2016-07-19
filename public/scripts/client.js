@@ -29,7 +29,7 @@ angular.module('twitterApp').controller('MainController', function($scope, $http
   $scope.randomName = function() {
     $scope.nameslist=[];
     for (var i=0; i<10; i++){
-      $scope.nameslist.push(adj[randomNumber(0, 10)].word + nouns[randomNumber(0, 10)].words);
+      $scope.nameslist.push(adj[randomNumber(0, adj.length)].word + nouns[randomNumber(0, nouns.length)].words);
     }
     console.log($scope.nameslist);
     console.log('running');
