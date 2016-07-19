@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="twitterApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+  </head>
+  <body ng-controller="MainController">
+    <button ng-click="randomName()">Get Names</button>
+    <h1 ng-repeat="names in nameslist track by $index">
+      <a ng-href="http://twitter.com/{{names}}">{{names}}</a>
+    </h1>
+  </body>
+</html>
